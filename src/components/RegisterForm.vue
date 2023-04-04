@@ -1,14 +1,20 @@
 <script setup>
 import { ref } from 'vue'
+import { useUserStore } from '../stores/user'
 
-const userData = ref({
-  country: 'USA'
-})
-
+const user = useUserStore()
 const reg_in_submission = ref(false)
 const reg_show_alert = ref(false)
 const reg_alert_variant = ref('bg-blue-500')
 const reg_alert_msg = ref('Please wait! Your account is being created.')
+const userData = ref({
+  name: 'DJ Lemmor Nuique',
+  email: 'djlemmor@gmail.com',
+  age: '27',
+  password: 'test1234',
+  confirm_password: 'test1234',
+  country: 'USA'
+})
 
 const registerSchema = {
   name: 'required|min:3|max:100|alpha_spaces',
@@ -20,25 +26,35 @@ const registerSchema = {
   tos: 'tos'
 }
 
-function register(values) {
+async function register(values) {
   reg_show_alert.value = true
   reg_in_submission.value = true
   reg_alert_variant.value = 'bg-blue-500'
   reg_alert_msg.value = 'Please wait! Your account is being created.'
 
+  try {
+    await user.register(values)
+  } catch (e) {
+    reg_in_submission.value = false
+    reg_alert_variant.value = 'bg-red-500'
+    reg_alert_msg.value = 'An unexpected error occured. Please try again later.'
+    return
+  }
+
   reg_alert_variant.value = 'bg-green-500'
   reg_alert_msg.value = 'Success! Your account has been created.'
-  console.log(values)
+  window.location.reload()
 }
-
 </script>
 <template>
   <!-- Registration Form -->
-  <div 
-    class="text-white text-center font-bold p-4 rounded mb-4" 
+  <div
+    class="text-white text-center font-bold p-4 rounded mb-4"
     v-if="reg_show_alert"
     :class="reg_alert_variant"
-  > {{ reg_alert_msg }}</div>
+  >
+    {{ reg_alert_msg }}
+  </div>
   <VeeForm :validation-schema="registerSchema" :initial-values="userData" @submit="register">
     <!-- Name -->
     <div class="mb-3">
@@ -82,7 +98,7 @@ function register(values) {
           placeholder="Password"
           v-bind="field"
         />
-        <div class="text-red-600" v-for="error in errors" :key="error"> {{ error }} </div>
+        <div class="text-red-600" v-for="error in errors" :key="error">{{ error }}</div>
       </VeeField>
     </div>
     <!-- Confirm Password -->
@@ -126,7 +142,7 @@ function register(values) {
       type="submit"
       class="block w-full bg-purple-600 text-white py-1.5 px-3 rounded transition hover:bg-purple-700 disabled:bg-gray-500"
       :disabled="reg_in_submission"
-      >
+    >
       Submit
     </button>
   </VeeForm>

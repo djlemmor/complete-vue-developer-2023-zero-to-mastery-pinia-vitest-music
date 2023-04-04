@@ -1,6 +1,17 @@
 <script setup>
+import { useUserStore } from './stores/user'
+import { auth } from '@/includes/firebase'
 import Header from '@/components/Header.vue'
 import Auth from '@/components/Auth.vue'
+
+const user = useUserStore()
+
+function isLoggedIn() {
+  if (auth.currentUser) {
+    user.userLoggedIn = true
+  }
+}
+isLoggedIn()
 </script>
 
 <template>

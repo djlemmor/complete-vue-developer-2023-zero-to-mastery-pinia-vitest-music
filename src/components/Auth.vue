@@ -6,7 +6,6 @@ import RegisterForm from '@/components/RegisterForm.vue'
 
 const modal = useModalStore()
 const tab = ref('login')
-
 </script>
 
 <template>
@@ -66,7 +65,6 @@ const tab = ref('login')
 
           <LoginForm v-if="tab === 'login'" />
           <RegisterForm v-else />
-          
         </div>
       </div>
     </div>
