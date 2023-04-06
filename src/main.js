@@ -11,6 +11,8 @@ import { auth } from './includes/firebase'
 import './assets/main.css'
 import './assets/base.css'
 
+import Icon from './directives/icon'
+
 let app
 
 onAuthStateChanged(auth, () => {
@@ -19,6 +21,7 @@ onAuthStateChanged(auth, () => {
     app.use(createPinia())
     app.use(router)
     app.use(VeeValidatePlugin)
+    app.directive('icon', Icon)
 
     app.mount('#app')
   }
