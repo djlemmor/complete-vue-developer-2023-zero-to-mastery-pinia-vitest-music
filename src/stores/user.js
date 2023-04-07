@@ -23,7 +23,6 @@ export const useUserStore = defineStore('user', () => {
     })
 
     await updateProfile(auth.currentUser, { displayName: values.name })
-    console.log('userCred user', userCred.user)
 
     userLoggedIn.value = true
   }

@@ -11,8 +11,6 @@ export const usePlayerStore = defineStore('player', () => {
   const playerProgress = ref('0%')
 
   async function newSong(song) {
-    console.log('newSong')
-
     if (sound.value instanceof Howl) {
       sound.value.unload()
     }
@@ -32,7 +30,6 @@ export const usePlayerStore = defineStore('player', () => {
   }
 
   async function toggleAudio() {
-    console.log('toggleAudio')
     if (!sound.value.playing) {
       return
     }
@@ -45,7 +42,6 @@ export const usePlayerStore = defineStore('player', () => {
   }
 
   function progress() {
-    console.log('progress')
     seek.value = helper.formatTime(sound.value.seek())
     duration.value = helper.formatTime(sound.value.duration())
 
@@ -57,8 +53,6 @@ export const usePlayerStore = defineStore('player', () => {
   }
 
   function updateSeek(event) {
-    console.log('updateSeek')
-
     if (!sound.value.playing) {
       return
     }

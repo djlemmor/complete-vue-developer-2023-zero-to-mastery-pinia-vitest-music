@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onBeforeUnmount } from 'vue'
-import { auth, db } from '../includes/firebase'
-import { collection, query, where, getDocs, limit, startAfter, orderBy } from 'firebase/firestore'
+import { db } from '../includes/firebase'
+import { collection, query, getDocs, limit, startAfter, orderBy } from 'firebase/firestore'
 import SongItem from '../components/SongItem.vue'
 
 const songs = ref([])
@@ -18,7 +18,6 @@ function handleScroll() {
   if (bottomOfWindow) {
     getSongs()
   }
-  console.log('handleScroll')
 }
 
 async function getSongs() {
@@ -33,18 +32,12 @@ async function getSongs() {
   if (songs.value.length) {
     q.value = query(
       collection(db, 'songs'),
-      where('uid', '==', auth.currentUser.uid),
       orderBy('modified_name'),
       startAfter(lastVisible.value),
       limit(maxPerPage.value)
     )
   } else {
-    q.value = query(
-      collection(db, 'songs'),
-      where('uid', '==', auth.currentUser.uid),
-      orderBy('modified_name'),
-      limit(maxPerPage.value)
-    )
+    q.value = query(collection(db, 'songs'), orderBy('modified_name'), limit(maxPerPage.value))
   }
 
   documentSnapshots = await getDocs(q.value)
