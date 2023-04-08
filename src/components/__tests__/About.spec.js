@@ -1,6 +1,6 @@
-import { describe, expect, test } from "vitest";
+import { describe, expect, test } from 'vitest'
 import About from '@/views/About.vue'
-import { shallowMount } from "@vue/test-utils";
+import { shallowMount } from '@vue/test-utils'
 
 describe('About.vue', () => {
   test('renders inner text', () => {

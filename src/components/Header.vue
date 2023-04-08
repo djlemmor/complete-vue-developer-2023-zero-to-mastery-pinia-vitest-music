@@ -28,10 +28,10 @@ async function logoutUser() {
 }
 
 function changeLocale() {
-  locale.value = locale.value === 'fr' ? 'en' : 'fr'
+  locale.value = locale.value === 'bi' ? 'en' : 'bi'
 }
 
-const currentLocale = computed(() => (locale.value === 'fr' ? 'French' : 'English'))
+const currentLocale = computed(() => (locale.value === 'bi' ? 'BI' : 'EN'))
 </script>
 
 <template>
@@ -42,8 +42,8 @@ const currentLocale = computed(() => (locale.value === 'fr' ? 'French' : 'Englis
       <RouterLink
         :to="{ name: 'Home' }"
         exact-active-class="no-active"
-        class="text-white font-bold uppercase text-2xl mr-4"
-        >Music</RouterLink
+        class="text-white font-bold text-2xl mr-4"
+        >DJmusic</RouterLink
       >
 
       <div class="flex flex-grow items-center">

@@ -1,5 +1,5 @@
-import { RouterLinkStub, shallowMount } from "@vue/test-utils";
-import { describe, expect, test } from "vitest";
+import { RouterLinkStub, shallowMount } from '@vue/test-utils'
+import { describe, expect, test } from 'vitest'
 import SongItem from '@/components/SongItem.vue'
 
 describe('Snapshots SongItem.vue', () => {
@@ -15,7 +15,7 @@ describe('Snapshots SongItem.vue', () => {
       propsData: { song },
       global: {
         components: {
-          'RouterLink': RouterLinkStub
+          RouterLink: RouterLinkStub
         }
       }
     })

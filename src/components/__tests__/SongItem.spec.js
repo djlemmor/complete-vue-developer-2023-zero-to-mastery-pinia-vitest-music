@@ -14,7 +14,7 @@ describe('SongItem.vue', () => {
       },
       global: {
         components: {
-          'RouterLink': RouterLinkStub
+          RouterLink: RouterLinkStub
         }
       }
     })
@@ -33,7 +33,7 @@ describe('SongItem.vue', () => {
       },
       global: {
         components: {
-          'RouterLink': RouterLinkStub
+          RouterLink: RouterLinkStub
         }
       }
     })
@@ -54,7 +54,7 @@ describe('SongItem.vue', () => {
       },
       global: {
         components: {
-          'RouterLink': RouterLinkStub
+          RouterLink: RouterLinkStub
         }
       }
     })
@@ -73,7 +73,7 @@ describe('SongItem.vue', () => {
       },
       global: {
         components: {
-          'RouterLink': RouterLinkStub
+          RouterLink: RouterLinkStub
         }
       }
     })

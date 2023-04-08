@@ -1,15 +1,20 @@
 {
   "home": {
-    "listen": "Listen to Great Music!"
+    "discover": "Discover and Share Great Music!",
+    "listen": "Listen and Share: Connect with a Global Community of Music Lovers on DJmusic!",
+    "songs": "Songs"
   },
   "song": {
     "comment_count": "No comments | 1 comment | {count} comments"
   },
   "register": {
-    "accept": "I accept Music's {0}",
+    "accept": "I accept DJmusic's {0}",
     "tos": "Terms of Service"
   },
   "manage": {
     "my_songs": "My Songs"
+  },
+  "about": {
+    "content": "Welcome to DJmusic! We believe that music has the power to connect people across cultures and continents. Our platform is designed to bring together a global community of music lovers, where you can discover new artists, share your own music, and collaborate with other musicians from around the world. Our mission is to make music accessible to everyone, whether you're a professional musician or simply a music enthusiast. Our user-friendly interface lets you listen to music uploaded by other users and upload your own music, and connect with fellow musicians from all over the world. At DJmusic, we're committed to fostering a safe and inclusive community where everyone can feel welcome and respected. We encourage you to share your unique musical perspective, connect with others who share your passion, and explore the rich diversity of global music. Thank you for choosing DJmusic as your go-to music destination. Let's make some beautiful music together!"
   }
 }

@@ -1,0 +1,20 @@
+{
+  "home": {
+    "discover": "Diskubre ug Ibahin ang Nindot na Musika!",
+    "listen": "Maminaw ug Ibahin: Pag-uyon sa usa ka Global nga Komunidad sa mga Nahigugma sa Musika sa DJmusic!",
+    "songs": "Mga Awit"
+  },
+  "song": {
+    "comment_count": "Walay komentaryo | 1 komentaryo | {count} komentaryo"
+  },
+  "register": {
+    "accept": "Gidawat nako ang DJmusic's {0}",
+    "tos": "Terms of Service"
+  },
+  "manage": {
+    "my_songs": "Akong Kanta"
+  },
+  "about": {
+    "content": "Maayong pag-abot sa DJmusic! Nagtuo kami nga ang musika adunay kusog nga makakonekta sa mga tawo sa mga kultura ug kontinente. Ang among plataporma gihimo aron pagsagupa sa usa ka global nga komunidad sa mga mahilig sa musika, diin mahimo nimo makadiskubre og bag-ong mga artista, makadawat og imong kaugalingong musika, ug makahiusa sa uban nga mga musikero gikan sa tibook kalibutan. Ang among misyon mao ang pagpalambo sa musika nga mas maangkon sa tanan, bisan kung ikaw usa ka propesyonal nga musikero o usa ka simple nga mahilig sa musika lamang. Ang among user-friendly nga interface nagtugot kanimo sa pagpaminaw sa musika nga gihatag sa ubang mga gumagamit ug paghiusa sa mga musikero nga imong masabtan gikan sa tibook kalibutan. Sa DJmusic, nagpabilin kami nga naningkamot sa pagpalapad sa usa ka luwas ug kasandigan nga komunidad diin ang tanan makadawat og maayong pagtagad ug respeto. Gihatagan nato og pagtagad ang imong unangon nga musikal nga perspektiba, paghiusa sa uban nga may kalagmitan sa imong gugma sa musika, ug paghimo sa pag-eksplorar sa bug-os nga kahilom sa global nga musika. Salamat sa pagpili sa DJmusic isip imong go-to nga destinasyon sa musika. Himoa nato ang makalilipay nga musika uban!"
+  }
+}

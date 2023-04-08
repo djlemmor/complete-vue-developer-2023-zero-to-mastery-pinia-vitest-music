@@ -1,6 +1,7 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-    <BaseButton />
-  </div>
+  <section class="container mx-auto mt-12">
+    <p class="text-lg text-justify">
+      {{ $t('about.content') }}
+    </p>
+  </section>
 </template>

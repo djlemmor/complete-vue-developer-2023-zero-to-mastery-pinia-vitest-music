@@ -1,6 +1,6 @@
 import { createI18n } from 'vue-i18n'
 import en from '../locales/en.json'
-import fr from '../locales/fr.json'
+import bi from '../locales/bi.json'
 
 export default createI18n({
   locale: 'en',
@@ -8,7 +8,7 @@ export default createI18n({
   legacy: false,
   messages: {
     en,
-    fr
+    bi
   },
   numberFormats: {
     en: {

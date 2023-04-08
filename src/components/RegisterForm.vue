@@ -8,12 +8,12 @@ const reg_show_alert = ref(false)
 const reg_alert_variant = ref('bg-blue-500')
 const reg_alert_msg = ref('Please wait! Your account is being created.')
 const userData = ref({
-  name: 'DJ Lemmor Nuique',
-  email: 'djlemmor@gmail.com',
-  age: '27',
-  password: 'test1234',
-  confirm_password: 'test1234',
-  country: 'USA'
+  name: '',
+  email: '',
+  age: '',
+  password: '',
+  confirm_password: '',
+  country: 'Philippines'
 })
 
 const registerSchema = {
@@ -120,9 +120,9 @@ async function register(values) {
         name="country"
         class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded"
       >
+        <option value="Philippines">Philippines</option>
         <option value="USA">USA</option>
         <option value="Mexico">Mexico</option>
-        <option value="Germany">Germany</option>
         <option value="Antarctica">Antarctica</option>
       </VeeField>
       <ErrorMessage name="country" class="text-red-600" />

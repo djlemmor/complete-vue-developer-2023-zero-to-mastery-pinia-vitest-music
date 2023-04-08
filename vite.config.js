@@ -14,7 +14,7 @@ export default defineConfig({
         enabled: true
       },
       manifest: {
-        name: 'Music App',
+        name: 'DJmusic App',
         theme_color: '#ff5e3a',
         icons: [
           {
