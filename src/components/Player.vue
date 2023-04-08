@@ -14,7 +14,7 @@ const player = usePlayerStore()
     </div>
     <div class="flex flex-nowrap gap-4 items-center">
       <!-- Play/Pause Button -->
-      <button type="button" @click.prevent="player.toggleAudio">
+      <button id="player-play-btn" type="button" @click.prevent="player.toggleAudio">
         <i
           class="fa text-gray-500 text-xl"
           :class="{ 'fa-play': !player.playing, 'fa-pause': player.playing }"

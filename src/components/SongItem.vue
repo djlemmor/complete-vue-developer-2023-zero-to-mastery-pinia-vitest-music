@@ -10,11 +10,13 @@ const props = defineProps({
 <template>
   <li
     class="flex justify-between items-center p-3 pl-6 cursor-pointer transition duration-300 hover:bg-gray-50"
+    :class="`song-id-${props.song.docId}`"
+    :id="`song-id-${props.song.docId}`"
   >
     <div>
       <RouterLink
         :to="{ name: 'Song', params: { id: props.song.docId } }"
-        class="font-bold block text-gray-600"
+        class="font-bold block text-gray-600 composition-name"
         >{{ props.song.modified_name }}</RouterLink
       >
       <span class="text-gray-500 text-sm">{{ props.song.display_name }}</span>
